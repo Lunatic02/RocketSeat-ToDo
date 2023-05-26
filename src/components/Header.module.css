@@ -1,0 +1,9 @@
+.header{
+  background-color: #0D0D0D;
+}
+
+.container{
+  max-width: 2rem;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
