@@ -13,14 +13,16 @@ export function Form(){
     const commentsWithoutTheDeletedOne = tarefas.filter((tarefa) => {
       return tarefa !== commentToDelete;
     });
+    setCreated(created-1)
     setTarefas(commentsWithoutTheDeletedOne);
   }
 
   function tarefaConcluded(checkbox: boolean){
-    if(checkbox === true)
-    setConcluded(concluded + 1)
-    
-    else setConcluded(concluded - 1)
+    if(checkbox===true){
+      setConcluded(concluded + 1)
+    } else{
+      setConcluded(concluded - 1)
+    }
   }
 
 
@@ -54,7 +56,7 @@ export function Form(){
 
         <p className={style.concluded}>
           <b>Concluídas</b>
-          <span>{concluded}</span>
+          <span>{concluded}/{created}</span>
         </p>
        </header>
        <div>
